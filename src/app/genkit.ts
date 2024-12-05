@@ -20,10 +20,8 @@ export const generateQuoteFlow = ai.defineFlow(
   },
   async () => {
     const { output } = await ai.generate({
-      system:
-        'Kamu adalah seorang ahli dalam merangkai kata-kata dan kamu adalah komedian.',
-      model: gemini15Flash,
-      prompt: `Buatkan saya quote motivasi lucu`,
+      system: 'Kamu adalah seorang komedian.',
+      prompt: `Buatkan saya kata-kata motivasi lucu untuk hari ini, jangan ada yang sama dengan sebelumnya`,
       output: { schema: resultSchema },
     });
     return output;
