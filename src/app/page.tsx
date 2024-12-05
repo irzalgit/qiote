@@ -22,7 +22,11 @@ export default function Home() {
 
   return (
     <main className="flex flex-col items-center justify-center h-screen text-center bg-black">
-      {quote && <p className="w-4/5 text-4xl text-white font-bold">{quote}</p>}
+      {quote && (
+        <p className="w-4/5 text-4xl text-white font-bold">
+          Singkat saja, {quote} PAHAM !!!
+        </p>
+      )}
       {isLoading && (
         <svg
           className="animate-spin h-16 w-16 text-[#FF44EC]"
